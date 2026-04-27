@@ -1,8 +1,22 @@
+:root {
+    --bg: #0f172a;
+    --text: #e2e8f0;
+    --card: #020617;
+    --accent: #38bdf8;
+}
+
+.light-mode {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --card: #ffffff;
+    --accent: #0284c7;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background: #0f172a;
-    color: #e2e8f0;
+    background: var(--bg);
+    color: var(--text);
 }
 
 header {
@@ -11,13 +25,25 @@ header {
     background: #020617;
 }
 
+#theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    background: var(--accent);
+    color: white;
+    border-radius: 8px;
+}
+
 h1 {
     margin: 0;
     font-size: 2.5rem;
 }
 
 h2 {
-    border-bottom: 2px solid #38bdf8;
+    border-bottom: 2px solid var(--accent);
     padding-bottom: 5px;
 }
 
@@ -47,12 +73,12 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+a {
+    color: var(--accent);
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: #020617;
+    background: var(--card);
 }
